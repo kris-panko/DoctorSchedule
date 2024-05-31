@@ -1,10 +1,9 @@
 package com.krispanko.model;
 
-import com.krispanko.model.Doctor;
-
 import javax.persistence.*;
 import java.util.Set;
 
+@Entity
 public class Hospital {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,4 +14,5 @@ public class Hospital {
 
     @OneToMany(mappedBy = "hospital")
     private Set<Doctor> doctors;
+
 }

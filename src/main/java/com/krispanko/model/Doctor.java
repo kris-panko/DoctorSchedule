@@ -24,5 +24,4 @@ public class Doctor {
 
     @ManyToMany(mappedBy = "doctors")
     private Set<Patient> patients;
-
 }
